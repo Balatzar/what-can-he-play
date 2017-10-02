@@ -15,17 +15,16 @@ const cardsSorted = cards.filter(c => c.type === "SPELL").reduce((acc, c) => {
   }
   return acc;
 }, {});
-console.log(Object.keys(cardsSorted));
 
-// const jsonToCreate = Object.keys(cardsSorted).reduce((acc, cc) => {
-//   acc[cc] = [...Array(mostExpensiveCardCost).keys()].map(a => []);
-//   return acc;
-// }, {});
+const jsonToCreate = Object.keys(cardsSorted).reduce((acc, cc) => {
+  acc[cc] = [...Array(mostExpensiveCardCost).keys()].map(a => []);
+  return acc;
+}, {});
 
-// Object.keys(cardsSorted).forEach(key => {
-//   cardsSorted[key].forEach(card => {
-//     jsonToCreate[key][card.cost].push(card);
-//   });
-// });
+Object.keys(cardsSorted).forEach(key => {
+  cardsSorted[key].forEach(card => {
+    jsonToCreate[key][card.cost].push(card);
+  });
+});
 
-// fs.writeFileSync("./cards.json", JSON.stringify(jsonToCreate), "utf8");
+fs.writeFileSync("./cards.json", JSON.stringify(jsonToCreate), "utf8");
