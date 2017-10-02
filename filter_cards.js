@@ -17,7 +17,7 @@ const cardsSorted = cards.filter(c => c.type === "SPELL").reduce((acc, c) => {
 }, {});
 
 const jsonToCreate = Object.keys(cardsSorted).reduce((acc, cc) => {
-  acc[cc] = [...Array(mostExpensiveCardCost).keys()].map(a => []);
+  acc[cc] = [...Array(mostExpensiveCardCost + 1).keys()].map(a => []);
   return acc;
 }, {});
 

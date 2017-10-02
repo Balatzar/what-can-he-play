@@ -14,7 +14,7 @@ post '/' do
   end
   enemy_class = context['parameters']['class']
   enemy_ressources = NumbersInWords.in_numbers(context['parameters']['ressources'])
-  playable_cards = cards[enemy_class][enemy_ressources].map { |c| c['name']}.join(', ')
+  playable_cards = cards[enemy_class][enemy_ressources].map { |c| c['name'] }.join(', ')
   speech = "Your opponent can play any of these cards : #{playable_cards}"
   JSON.generate(speech: speech)
 end
