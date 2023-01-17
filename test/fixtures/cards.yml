@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  img: 
+  minimal_cost: 1
+  white: false
+  red: false
+  black: false
+  green: false
+  blue: false
+
+two:
+  name: MyString
+  img: 
+  minimal_cost: 1
+  white: false
+  red: false
+  black: false
+  green: false
+  blue: false

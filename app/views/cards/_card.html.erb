@@ -1,0 +1,47 @@
+<div id="<%= dom_id card %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= card.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Img:</strong>
+    <%= card.img %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Minimal cost:</strong>
+    <%= card.minimal_cost %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">White:</strong>
+    <%= card.white %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Red:</strong>
+    <%= card.red %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Black:</strong>
+    <%= card.black %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Green:</strong>
+    <%= card.green %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Blue:</strong>
+    <%= card.blue %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this card", card, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this card', edit_card_path(card), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
