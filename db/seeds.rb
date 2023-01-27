@@ -1,12 +1,12 @@
 # Editions
-edition_1 = Edition.find_or_create_by(name: "Brother of War")
+edition_1 = Edition.find_or_create_by(name: "The Brothers War")
 
 # Red Cards
 card_1 = Card.find_or_create_by(name: "Myrel, Shield of Argive", minimal_cost: 4, blue: false, white: true, green: false, black: false, red: false)
 card_2 = Card.find_or_create_by(name: "Brotherhood's End", minimal_cost: 3, blue: false, white: false, green: false, black: false, red: true)
 
 # Formats
-format_1 = Format.create(name: "Standard")
+format_1 = Format.find_or_create_by(name: "Standard")
 
 # Relation Cards <=> Editions
 CardEdition.find_or_create_by(card_id: card_1, edition_id: edition_1)
