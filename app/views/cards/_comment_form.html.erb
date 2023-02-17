@@ -1,0 +1,10 @@
+<div class="nested-form-wrapper" data-new-record="<%= form.object.new_record? %>">
+  <%= form.label :text %>
+  <%= form.text_field :text %>
+  <%= form.select :format, Format.pluck(:name) %>
+
+
+  <button type="button" data-action="nested-form#remove">Remove comment</button>
+
+  <%= form.hidden_field :_destroy %>
+</div>
