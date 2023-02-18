@@ -1,5 +1,3 @@
 {
-  "dependencies": {
-    "stimulus-rails-nested-form": "^4.1.0"
-  }
+  "dependencies": {}
 }

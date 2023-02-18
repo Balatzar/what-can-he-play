@@ -57,7 +57,7 @@
     <% end %>
   </template>
 
-  <button type="button" data-action="nested-form#add" class="block rounded-lg py-3 px-5 my-2 bg-blue-500 text-white font-medium">Add comment</button>
+  <button type="button" data-action="nested-form#add" class="block rounded-lg py-3 px-5 my-2 bg-blue-500 text-white font-medium">Add format</button>
 
   <%= form.fields_for :comments do |comment_fields| %>
     <%= render "comment_form", form: comment_fields %>
