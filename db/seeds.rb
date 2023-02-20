@@ -1,4 +1,5 @@
 # Editions
+<<<<<<< HEAD
 edition_1 = Edition.find_or_create_by(name: "Brother of War")
 # edition_2 = Edition.create(name: "Beta")
 # edition_3 = Edition.create(name: "Unlimited")
@@ -9,10 +10,14 @@ edition_1 = Edition.find_or_create_by(name: "Brother of War")
 # edition_8 = Edition.create(name: "Seventh Edition")
 # edition_9 = Edition.create(name: "Eighth Edition")
 # edition_10 = Edition.create(name: "Ninth Edition")
+=======
+edition_1 = Edition.find_or_create_by(name: "The Brothers War")
+>>>>>>> main
 
 # Red Cards
 card_1 = Card.find_or_create_by(name: "Myrel, Shield of Argive", minimal_cost: 4, blue: false, white: true, green: false, black: false, red: false)
 card_2 = Card.find_or_create_by(name: "Brotherhood's End", minimal_cost: 3, blue: false, white: false, green: false, black: false, red: true)
+<<<<<<< HEAD
 # card_3 = Card.create(name: "Fireball", minimal_cost: 2, blue: false, white: false, green: false, black: false, red: true)
 # card_4 = Card.create(name: "Goblin Guide", minimal_cost: 1, blue: false, white: false, green: false, black: false, red: true)
 # card_5 = Card.create(name: "Eidolon of the Great Revel", minimal_cost: 1, blue: false, white: false, green: false, black: false, red: true)
@@ -75,10 +80,16 @@ format_1 = Format.create(name: "Standard")
 # format_3 = Format.create(name: "Historic")
 # format_4 = Format.create(name: "Vintage")
 # format_5 = Format.create(name: "Legacy")
+=======
+
+# Formats
+format_1 = Format.find_or_create_by(name: "Standard")
+>>>>>>> main
 
 # Relation Cards <=> Editions
 CardEdition.find_or_create_by(card_id: card_1, edition_id: edition_1)
 CardEdition.find_or_create_by(card_id: card_2, edition_id: edition_1)
+<<<<<<< HEAD
 # CardEdition.create(card_id: card_3, edition_id: edition_3)
 # CardEdition.create(card_id: card_4, edition_id: edition_4)
 # CardEdition.create(card_id: card_5, edition_id: edition_5)
@@ -181,5 +192,12 @@ EditionFormat.find_or_create_by(format_id: format_1, edition_id: edition_1)
 
 # Commentaires
 
+=======
+
+# Relation Formats <=> Editions
+EditionFormat.find_or_create_by(format_id: format_1, edition_id: edition_1)
+
+# Commentaires
+>>>>>>> main
 Comment.find_or_create_by(card_id: card_1, format_id: format_1, text: "Créature à gros impact")
 Comment.find_or_create_by(card_id: card_2, format_id: format_1, text: "Un sweaper pour trois mana, peut aussi détruire tous les artefacts")
