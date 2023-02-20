@@ -1,4 +1,19 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# == Schema Information
+#
+# Table name: cards
+#
+#  id           :bigint           not null, primary key
+#  name         :string
+#  img          :binary
+#  minimal_cost :integer
+#  white        :boolean
+#  red          :boolean
+#  black        :boolean
+#  green        :boolean
+#  blue         :boolean
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
 
 one:
   name: MyString
