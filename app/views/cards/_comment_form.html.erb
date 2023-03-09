@@ -1,0 +1,9 @@
+<div class="nested-form-wrapper inline-block ml-2 py-3 px-5" data-new-record="<%= form.object.new_record? %>">
+  <%= form.label :text %>
+  <%= form.text_field :text %>
+  <%= form.collection_select :format_id, Format.order(:name), :id, :name %>
+
+  <button type="button" data-action="nested-form#remove" class="ml-2 rounded-lg py-3 px-5 bg-red-500 text-white font-medium">Delete</button>
+
+  <%= form.hidden_field :_destroy %>
+</div>
